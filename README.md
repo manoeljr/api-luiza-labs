@@ -7,6 +7,6 @@
 - Pylintrc
 - SQLAlchemy
 - Flash
--Postgres
+- Postgres
 
 #### Conseitos de SOLID
