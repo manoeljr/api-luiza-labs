@@ -1,4 +1,3 @@
-### Desafio LuizaLabs
 #### Tecnologias envolvidas
 
 - Fake 8
