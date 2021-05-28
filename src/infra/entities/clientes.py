@@ -6,7 +6,7 @@ from src.infra.config import Base
 
 
 class Clientes(Base):
-    """ Entidade Cliente """
+    """Entidade Cliente"""
 
     __tablename__ = "clientes"
 
@@ -17,4 +17,4 @@ class Clientes(Base):
     id_produto = relationship("Produtos")
 
     def __repr__(self):
-        return f"Cliente [name={self.nome}]"
+        return f"Cliente [nome={self.nome}]"
