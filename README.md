@@ -1,4 +1,3 @@
-### Desafio LuizaLabs
 #### Tecnologias envolvidas
 
 - Fake 8
@@ -7,6 +6,6 @@
 - Pylintrc
 - SQLAlchemy
 - Flash
--Postgres
+- Postgres
 
 #### Conseitos de SOLID
