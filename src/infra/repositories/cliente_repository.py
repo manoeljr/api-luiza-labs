@@ -14,8 +14,7 @@ class ClienteRepository:
         :param email: Email do cliente
         :return Tupla com um cliente
         """
-
-        with DBConnetionHandler() as db_connection:
+         with DBConnetionHandler() as db_connection:
             try:
                 cliente = clienteModel(nome=nome, email=email)
                 db_connection.session.add(cliente)
