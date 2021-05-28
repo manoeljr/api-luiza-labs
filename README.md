@@ -7,5 +7,7 @@
 - SQLAlchemy
 - Flash
 - Postgres
+- Faker
+- Pytest
 
 #### Conseitos de SOLID
