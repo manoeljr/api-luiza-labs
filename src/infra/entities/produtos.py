@@ -5,7 +5,7 @@ from src.infra.config import Base
 
 
 class Produtos(Base):
-    """ Entidade Produtos """
+    """Entidade Produtos"""
 
     __tablename__ = "produtos"
 
@@ -18,3 +18,15 @@ class Produtos(Base):
 
     def __repr__(self):
         return f"Produto: [nome={self.nome_produto}, titulo: {self.titulo}, preco: {self.preco}, imagem: {self.imagem}, imagem: {self.imagem}]"
+
+    def __eq__(self, other):
+        if (
+            self.id == other.id
+            and self.preco == other.preco
+            and self.imagem == other.imagem
+            and self.nome_produto == other.nome_produto
+            and self.titulo == other.titulo
+            and self.cliente_id == other.cliente_id
+        ):
+            return True
+        return False

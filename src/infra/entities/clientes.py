@@ -18,3 +18,12 @@ class Clientes(Base):
 
     def __repr__(self):
         return f"Cliente [nome={self.nome}]"
+
+    def __eq__(self, other):
+        if (
+            self.id == other.id
+            and self.nome == other.nome
+            and self.email == other.email
+        ):
+            return True
+        return False
