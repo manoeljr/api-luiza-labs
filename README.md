@@ -1,13 +1,14 @@
 #### Tecnologias envolvidas
+- Flake8 - Automitização de algumas ferramentas
+- Pre commit - Ajuda nos commit no git
+- Black - Formatador de código
+- Pylintrc - Padronização de código
+- SQLAlchemy - ORM
+- Faker - Criação de dados fakes para testes
+- Pytest - Testes
+- Docker - Conteiners
 
-- Fake 8
-- Pre commit
-- Black
-- Pylintrc
-- SQLAlchemy
-- Flash
+#### Base de dados
 - Postgres
-- Faker
-- Pytest
 
-#### Conseitos de SOLID
+#### Alguns conceitos de SOLID
