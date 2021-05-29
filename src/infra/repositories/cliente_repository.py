@@ -1,9 +1,10 @@
 from src.infra.config import DBConnetionHandler
 from src.infra.entities import Clientes as clienteModel
+from src.data.interfaces import ClienteRepositoryInterfaces
 from src.domain.models import Clientes
 
 
-class ClienteRepository:
+class ClienteRepository(ClienteRepositoryInterfaces):
     """Cliente Repository"""
 
     @classmethod
@@ -14,7 +15,7 @@ class ClienteRepository:
         :param email: Email do cliente
         :return Tupla com um cliente
         """
-         with DBConnetionHandler() as db_connection:
+        with DBConnetionHandler() as db_connection:
             try:
                 cliente = clienteModel(nome=nome, email=email)
                 db_connection.session.add(cliente)
