@@ -45,3 +45,7 @@
 #     assert data in query_cliente3
 #
 #     engine.execute(f"DELETE FROM clientes WHERE id='{cliente_id}'")
+
+# def test_register():
+#     """ Testando o registro de cliente """
+#     pass

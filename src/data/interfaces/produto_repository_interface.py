@@ -9,7 +9,6 @@ class ProdutoRepositoryInterfaces(ABC):
     @abstractmethod
     def insert_produto(
         self,
-        id: str,
         preco: float,
         imagem: str,
         nome_produto: str,
