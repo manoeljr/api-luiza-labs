@@ -20,3 +20,8 @@ class ClienteRepositoryInterfaces(ABC):
     def registrar_cliente(self, nome: str, email: str) -> Clientes:
         """ Metodo de registro de cliente """
         raise Exception("Metodo de registro de cliente")
+
+    @abstractmethod
+    def encontrar_cliente(self, id: str) -> Clientes:
+        """ Metodo de encontrar cliente """
+        raise Exception("Metodo de encontrar clientes")

@@ -77,5 +77,14 @@ class ClienteRepository(ClienteRepositoryInterfaces):
         if validate_entry:
             response  = cls.insert_cliente(nome, email)
 
-        return { "Sucess": validate_entry, "Date": response }
+        return { "Sucess": validate_entry, "Data": response }
 
+    @classmethod
+    def encontar_cliente(cls, id: str) -> Dict[bool, Clientes]:
+        """ Encontrando um cliente """
+        response = None
+        validate_entry = isinstance(id, str)
+        if validate_entry:
+            response = cls.encontar_cliente(id)
+
+        return { "Sucess": validate_entry, "Data": response }
