@@ -2,6 +2,7 @@ from src.infra.config import DBConnetionHandler
 from src.infra.entities import Clientes as clienteModel
 from src.data.interfaces import ClienteRepositoryInterfaces
 from src.domain.models import Clientes
+from typing import Dict
 
 
 class ClienteRepository(ClienteRepositoryInterfaces):
@@ -67,3 +68,14 @@ class ClienteRepository(ClienteRepositoryInterfaces):
             raise
         finally:
             db_connection.session.close()
+
+    @classmethod
+    def register_cliente(cls, nome: str, email: str) -> Dict[bool, Clientes]:
+        """ Registrando um cliente """
+        response = None
+        validate_entry = isinstance(nome, str) and isinstance(email, str)
+        if validate_entry:
+            response  = cls.insert_cliente(nome, email)
+
+        return { "Sucess": validate_entry, "Date": response }
+
