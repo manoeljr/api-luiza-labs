@@ -7,21 +7,21 @@ class ClienteRepositoryInterfaces(ABC):
     """ Interface de ClienteRepository """
 
     @abstractmethod
-    def insert_cliente(self, nome: str, email: str) -> Clientes:
+    def inserir_cliente(self, nome: str, email: str) -> Clientes:
         """ Metodo abstrato de inserir um cliente """
-        raise Exception("Metodo não implementado")
+        raise Exception("Metodo cadastrar cliente não implementado")
 
     @abstractmethod
-    def select_cliente(self, nome: str = None, email: str = None) -> List[Clientes]:
-        """ Metodo abstrato de selecionar um cliente """
-        raise Exception("Metodo não implementado")
+    def selecionar_clientes(self) -> List[Clientes]:
+        """ Metodo abstrato de selecionar todos clientes """
+        raise Exception("Metodo Selecionar clientes não implementado")
 
     @abstractmethod
-    def registrar_cliente(self, nome: str, email: str) -> Clientes:
-        """ Metodo de registro de cliente """
-        raise Exception("Metodo de registro de cliente")
+    def deletar_cliente(self, id: str):
+        """ Metodo abstrato de deletar um cliente """
+        raise Exception("Metodo deletar cliente não implementado")
 
     @abstractmethod
-    def encontrar_cliente(self, id: str) -> Clientes:
-        """ Metodo de encontrar cliente """
-        raise Exception("Metodo de encontrar clientes")
+    def buscar_cliente(self, id: str) -> Clientes:
+        """ Metodo abstrato de encontrar um cliente """
+        raise Exception("Metodo encontrar clientes não implementado")

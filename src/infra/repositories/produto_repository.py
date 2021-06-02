@@ -8,7 +8,7 @@ class ProdutoRepository(ProdutoRepositoryInterfaces):
     """Produto repository"""
 
     @classmethod
-    def insert_produto(
+    def inserir_produto(
         cls, preco: float, imagem: str, nome_produto: str, titulo: str, cliente_id: str
     ) -> Produtos:
         """
@@ -46,7 +46,7 @@ class ProdutoRepository(ProdutoRepositoryInterfaces):
                 db_connection.session.close()
 
     @classmethod
-    def select_produto(
+    def selecionar_produtos(
         cls, produto_id: str = None, cliente_id: str = None
     ) -> list[Produtos]:
         """
@@ -87,3 +87,11 @@ class ProdutoRepository(ProdutoRepositoryInterfaces):
             raise
         finally:
             db_connection.session.close()
+
+    @classmethod
+    def buscar_produto(cls, id: str, produto_id: str) -> list[Produtos]:
+        pass
+
+    @classmethod
+    def deletar_produto(cls, id: str):
+        pass
