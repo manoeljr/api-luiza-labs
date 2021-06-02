@@ -5,7 +5,6 @@
 - Pylintrc - Padronização de código
 - SQLAlchemy - ORM
 - Faker - Criação de dados fakes para testes
-- Pytest - Testes
 - Docker - Conteiners
 
 #### Base de dados
