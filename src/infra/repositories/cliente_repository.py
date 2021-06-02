@@ -9,7 +9,7 @@ class ClienteRepository(ClienteRepositoryInterfaces):
     """Cliente Repository"""
 
     @classmethod
-    def insert_cliente(cls, nome: str, email: str) -> Clientes:
+    def inserir_cliente(cls, nome: str, email: str) -> Clientes:
         """
         Inserindo um cliente na base de dados
         :param nome: Nome do cliente
@@ -29,7 +29,7 @@ class ClienteRepository(ClienteRepositoryInterfaces):
                 db_connection.session.close()
 
     @classmethod
-    def select_cliente(cls, cliente_id: str = None, nome: str = None) -> list:
+    def selecionar_clientes(cls, cliente_id: str = None, nome: str = None) -> list:
         """
         Selecionando cliente por nome ou id
         :param cliente_id: id do cliente
@@ -70,17 +70,11 @@ class ClienteRepository(ClienteRepositoryInterfaces):
             db_connection.session.close()
 
     @classmethod
-    def register_cliente(cls, nome: str, email: str) -> Dict[bool, Clientes]:
-        """ Registrando um cliente """
-        response = None
-        validate_entry = isinstance(nome, str) and isinstance(email, str)
-        if validate_entry:
-            response  = cls.insert_cliente(nome, email)
-
-        return { "Sucess": validate_entry, "Data": response }
+    def deletar_cliente(cls, id: str) -> None:
+        pass
 
     @classmethod
-    def encontar_cliente(cls, id: str) -> Dict[bool, Clientes]:
+    def buscar_cliente(cls, id: str) -> Dict[bool, Clientes]:
         """ Encontrando um cliente """
         response = None
         validate_entry = isinstance(id, str)
